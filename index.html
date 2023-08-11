@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparador Lógico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body id="app">
+    <header id="header" class="flex columns justify-content">
+      <h1 id="title">Comparador Lógico</h1>
+      <!-- <h2 id="author">Autora: Danielle de Lima Vieira</h2> -->
+    </header>
+    <main id="main" class="flex rows justify-content">
+      <form id="logical-comparator" class="container">
+        <label for="term1" id="term1-label" class="label">
+          <input
+            type="number"
+            id="term1"
+            placeholder="0"
+            class="input-control"
+            autofocus
+          />
+        </label>
+        <select name="operators" id="operators" class="select">
+          <option value="lt" id="lt">&lt;</option>
+          <option value="gt" id="gt">&gt;</option>
+          <option value="le" id="le">&le;</option>
+          <option value="ge" id="ge">&ge;</option>
+          <option value="eq" id="eq">=</option>
+          <option value="ne" id="ne">&ne;</option>
+        </select>
+        <label for="term2" id="term2-label" class="label">
+          <input
+            type="number"
+            id="term2"
+            placeholder="0"
+            class="input-control"
+          />
+        </label>
+        <label for="calculate-btn" id="calculate-btn-label" class="label">
+          <input
+            type="button"
+            id="calculate-btn"
+            value="="
+            class="input-control btn"
+          />
+        </label>
+        <label for="result" id="result-label" class="label">
+          <input
+            type="text"
+            id="result"
+            value="false"
+            disabled
+            class="input-control"
+          />
+        </label>
+      </form>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+:root {
+  --primary: #f09e50;
+  --emphasis: #f86831;
+  --secondary: #fac263;
+  --tertiary: crimson;
+  --blur: #fdd897;
+  --light: whitesmoke;
+  --dark: #333;
+  --border: lightgray;
+}
+
+#app {
+  font-family: "Edu SA Beginner", cursive;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: ". . ." ". header ." ". . ." ". main ." ". . .";
+  grid-template-rows: 10% min-content 1% auto 10%;
+  background-color: var(--dark);
+}
+
+#header {
+  grid-area: header;
+  color: var(--light);
+  background-image: linear-gradient(to right, var(--tertiary), var(--emphasis));
+}
+
+#main {
+  grid-area: main;
+  background-image: url("https://img.freepik.com/free-vector/gradient-japanese-temple-with-sun_52683-44985.jpg?w=740&t=st=1691776843~exp=1691777443~hmac=d85ce24f99208dac2a6fd548b09e65a31f3996410c3a5576876ade9262ab0425");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5rem;
+}
+
+.input-control,
+.select {
+  width: 6rem;
+  height: 3rem;
+  border: 0.1rem solid var(--border);
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.input-control::placeholder {
+  color: var(--blur);
+}
+
+.input-control:disabled {
+  background-color: var(--light);
+}
+
+:is(.input-control, .select):focus {
+  outline: 0.1rem solid var(--primary);
+  border: none;
+}
+
+.btn,
+.select {
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--secondary);
+}
+
+.btn:active {
+  background-color: var(--emphasis);
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.columns {
+  flex-direction: column;
+}
+
+.rows {
+  flex-direction: row;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.align-items {
+  align-items: center;
+}
